@@ -63,5 +63,15 @@ int main()
     printf("%s\n", getPrimaryColor(color));
     printf("%d\n", thisMonth);
 
+    int intVar = 100;
+    float floatVar = 331.79;
+    double doubleVar = 8.44e+11;
+    char charVar = 'w';
+
+    printf("intVar: %i\n", intVar);
+    printf("floatVar: %e\n", floatVar);
+    printf("doubleVar: %g\n", doubleVar);
+    printf("charVar: %c\n", charVar);
+
     return 0;
 }
