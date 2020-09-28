@@ -22,13 +22,18 @@ int main() {
 
     int num1;
     int num2;
+    char word[100];
 
-    // printf("Please enter a value for num1: ");
-    // scanf("%d", &num1);
-    // printf("\nPlease enter a value for num2: ");
-    // scanf("%d", &num2);
+    printf("Please enter a value for num1: ");
+    scanf("%d", &num1);
+    printf("\nPlease enter a value for num2: ");
+    scanf("%d", &num2);
+    printf("\nPlease enter a value for word: ");
+    scanf("%s", word);
 
-    // printf("%d + %d = %d\n", num1, num2, add(num1, num2));
+    printf("%d + %d = %d\nWord is: %s", num1, num2, add(num1, num2), word);
     // return 0;
+
+    return 0;
 
 }
