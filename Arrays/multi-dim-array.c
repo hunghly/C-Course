@@ -10,6 +10,9 @@ int main() {
         [3][0] = 20,
     };
 
+    int x = 10;
+    int variableLengthArray[x];
+
     printf("%d\n", matrix[1][1]);
     printf("%d\n", matrix[3][1]);
     printf("%d\n", matrix[3][0]);
