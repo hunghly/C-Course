@@ -1,0 +1,1 @@
+#define EXPORTED_STRING "This string comes from include_define.h"
