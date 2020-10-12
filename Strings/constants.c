@@ -12,5 +12,13 @@ int main() {
     printf("Importing this string: \"%s\" from header.\n", EXPORTED_STRING);
     printf("This string declares a const string %s \n", does_not_change);
 
-    
+    // String functions strlen, strcpy, strncpy, strcat, strncat, strcmp, strncmp
+    printf("Length of string is %d\n", strlen(does_not_change));
+    // Creating a copy using strcpy
+    char copy_str[100];
+    char copyn_str[100];
+    strcpy(copy_str, does_not_change);
+    strncpy(copyn_str, does_not_change, 10);
+    printf("new string after copy %s\n", copy_str);
+    printf("copyn_str is now %s using strncpy\n", copyn_str);
 }
