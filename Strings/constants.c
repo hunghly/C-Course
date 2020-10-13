@@ -16,9 +16,18 @@ int main() {
     printf("Length of string is %d\n", strlen(does_not_change));
     // Creating a copy using strcpy
     char copy_str[100];
-    char copyn_str[100];
+    char copyn_str[10];
     strcpy(copy_str, does_not_change);
-    strncpy(copyn_str, does_not_change, 10);
     printf("new string after copy %s\n", copy_str);
-    printf("copyn_str is now %s using strncpy\n", copyn_str);
+    // strncpy(copyn_str, does_not_change, 10); // will copy the first 10 chars
+    strncpy(copyn_str, does_not_change, sizeof(copyn_str) - 1); // this line of code copys everything that it can from does_not_change and prevent buffer overflow
+    printf("copyn_str is now the string: %s - using strncpy and passing in the number 10\n", copyn_str);
+
+    /* String concat */
+    char hello[100] = "Hello ";
+    char name[100];
+    printf("\nPlease enter something your name: ");
+    scanf("%s", name);
+    printf("%s", strcat(hello, name));
+    printf("%s", hello);
 }
