@@ -5,7 +5,8 @@
 #define TAX_RATE 0.015
 #define SCHOOL_NAME "Arizona State University"
 
-int main() {
+int main()
+{
     const char does_not_change[] = "This does not change"; // this string does not change
     printf("Tax rate is: %f\n", TAX_RATE);
     printf("School name: %s\n", SCHOOL_NAME);
@@ -29,5 +30,9 @@ int main() {
     printf("\nPlease enter something your name: ");
     scanf("%s", name);
     printf("%s", strcat(hello, name));
-    printf("%s", hello);
+    // printf("%s", hello);
+
+    printf("\ncomparing %s and %s, the value is %d\n", "hello", "hello", strcmp("hello", "hello"));
+    printf("\ncomparing %s and %s, the value is %d\n", "hello", "hello!!", strcmp("hello", "hello!!"));
+    printf("\ncomparing %s and %s, the value is %d\n", "hello!!", "hello", strcmp("hello!!", "hello"));
 }
