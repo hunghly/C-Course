@@ -6,10 +6,17 @@
     "configurations": [
 
         {
+            "type": "by-gdb",
+            "request": "launch",
+            "name": "Launch(gdb)",
+            "program": "${workspaceFolder}/Debug/debug",
+            "cwd": "${workspaceFolder}"
+        },
+        {
             "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/helloworld",
+            "program": "${workspaceFolder}/Debug/debug",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
