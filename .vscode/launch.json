@@ -9,14 +9,14 @@
             "type": "by-gdb",
             "request": "launch",
             "name": "Launch(gdb)",
-            "program": "${workspaceFolder}/Debug/debug",
+            "program": "${workspaceFolder}/Pointers/pointer-arithmetic-1",
             "cwd": "${workspaceFolder}"
         },
         {
             "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Debug/debug",
+            "program": "${workspaceFolder}/Pointers/pointer-arithmetic-1",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",

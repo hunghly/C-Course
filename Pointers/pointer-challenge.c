@@ -15,4 +15,8 @@ int main() {
     // the pointer's address
     // the pointer's value (which is the address of what the pointer is pointing to)
     // the pointer's target's value
+
+    *pnumber += 25; // adds to the value pointed at by pointer
+    printf("pnumber's pointed value is now %d\n", *pnumber);
+    printf("number is %d\n", number);
 }
