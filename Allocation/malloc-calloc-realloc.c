@@ -42,15 +42,19 @@ int main() {
 
     char *str;
     /* initial mem allocation */
-    str = (char*) malloc(15);
+    str = (char*) malloc(15 * sizeof(char));
     strcpy(str, "jason");
-    printf("String = %s, Address = %u\n", str, str);
+    printf("String = %s, Address = %p\n", str, str);
     /* reallocating memory */
-    str = (char*)realloc(str,25);
+    str = (char*)realloc(str,25 * sizeof(char));
     printf("sizeof .com is %lu\n", sizeof(".com"));
     strcat(str, ".com");
-    printf("String = %s, Address = %u\n", str, str);
+    printf("String = %s, Address = %p\n", str, str);
 
     free(str);
+
+
+    // avoid allocating small amounts of memory since there is some overhead with allocating
+    // make sure to not inadvertently override memory allocation addresses
     return 0;
 }
