@@ -1,6 +1,7 @@
 #include <stdio.h>
 // declare prototypes
 int arraySum(int array[], const int n);
+int arraySum2(int *array, const int n);
 
 
 int main() {
@@ -8,6 +9,9 @@ int main() {
     int values2[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     printf("The sum of values is %i\n", arraySum(values, 10));
     printf("The sum of values2 is %i\n", arraySum(values2, 10));
+    // using the second version of arraySum2
+    printf("The sum of values is %i\n", arraySum2(values, 10));
+    printf("The sum of values2 is %i\n", arraySum2(values2, 10));
 }
 
 int arraySum(int array[], const int n) {
@@ -18,6 +22,18 @@ int arraySum(int array[], const int n) {
 
     for (ptr = array; ptr < arrayEnd; ++ptr) {
         sum += *ptr;
+    }
+    return sum;
+}
+
+int arraySum2(int *array, const int n) {
+    int sum = 0; // declare/init sum and declare a ptr
+    int *const arrayEnd = array + n; // the address of the end of the array
+    printf("The value of *array is %d\n", *array);
+    printf("The address of arrayEnd is %p\n", arrayEnd);
+
+    for (; array < arrayEnd; ++array) {
+        sum += *array;
     }
     return sum;
 }
