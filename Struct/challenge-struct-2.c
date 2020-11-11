@@ -11,11 +11,8 @@ struct item {
 
 void readItem(struct item *item) {
     // read in a produce name, price, and quantity from user and store into item
-    char itemName[100];
     printf("Please enter the item name: ");
-    scanf(" %s", itemName);
-    item->itemName = (char*)calloc(100, sizeof(char));
-    strcpy(item->itemName, itemName);
+    scanf(" %s", item->itemName);
     printf("Please enter the quantity: ");
     scanf(" %d", &item->quantity);
     printf("Please enter the price: ");
@@ -35,6 +32,12 @@ int main(void) {
     // pass to both functions
     struct item myItem; // declare item
     struct item *myItemPtr = &myItem; //declare item ptr
+
+    myItemPtr->itemName = (char*)calloc(100, sizeof(char)); // allocate memory for itemName ptr
+    if (myItemPtr == NULL) {
+        exit(-1);
+    }
     readItem(myItemPtr);
     printItem(myItemPtr);
+    return 0;
 }
